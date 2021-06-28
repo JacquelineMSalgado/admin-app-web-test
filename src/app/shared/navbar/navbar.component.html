@@ -27,7 +27,7 @@
             </a>
             <div ngbDropdownMenu aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
               <a ngbDropdownItem href="javascript:void(0)">Configuración de usuario</a>
-              <a ngbDropdownItem href="javascript:void(0)">Cerrar sesión</a>
+              <a ngbDropdownItem (click)="cerrarSesion()">Cerrar sesión</a>
             </div>
           </li>
         </ul>

@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 import { Router } from '@angular/router';
 import { ROUTES } from 'src/app/sidebar/sidebar.component';
 import { Location} from '@angular/common';
+import { SesionService } from 'src/app/services/sesion.service';
 
 @Component({
   selector: 'app-navbar',
@@ -19,7 +20,7 @@ export class NavbarComponent implements OnInit {
   public isCollapsed = true;
   @ViewChild("navbar-cmp", {static: false}) button;
 
-  constructor(location:Location, private renderer : Renderer2, private element : ElementRef, private router: Router) {
+  constructor(location:Location, private renderer : Renderer2, private element : ElementRef, private router: Router, private sesionService: SesionService) {
       this.location = location;
       this.nativeElement = element.nativeElement;
       this.sidebarVisible = false;
@@ -33,6 +34,14 @@ export class NavbarComponent implements OnInit {
         this.sidebarClose();
      });
   }
+
+  cerrarSesion() {
+    if(this.sesionService.secureStorage.getItem('userSesionData')){
+      this.sesionService.secureStorage.removeItem('userSesionData')
+    }
+    this.router.navigateByUrl('/inicio-sesion');
+  }
+
   getTitle(){
     var titlee = this.location.prepareExternalUrl(this.location.path());
     if(titlee.charAt(0) === '#'){

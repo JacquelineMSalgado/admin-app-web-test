@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card ">
+            <div class="card-header ">
+                <h5 class="card-title">Ventas por producto</h5>
+                <p class="card-category">Reporte</p>
+            </div>
+            <div class="card-body ">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th *ngFor="let enc of encabezados"> {{enc}} </th>
+                        </thead>
+                      <tbody>
+                        <tr *ngFor="let venta of ventasProducto">
+                            <td *ngFor="let col of encabezados"> {{venta[col]}} </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card ">
+            <div class="card-header ">
+                <h5 class="card-title">Ventas por mes</h5>
+                <p class="card-category">Reporte</p>
+            </div>
+            <div class="card-body ">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th *ngFor="let enc of encabezados1"> {{enc}} </th>
+                        </thead>
+                      <tbody>
+                        <tr *ngFor="let venta of ventasMes">
+                            <td *ngFor="let col of encabezados1"> {{venta[col]}} </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card ">
+            <div class="card-header ">
+                <h5 class="card-title">Ventas por producto y mes</h5>
+                <p class="card-category">Reporte</p>
+            </div>
+            <div class="card-body ">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th *ngFor="let enc of encabezados2"> {{enc}} </th>
+                        </thead>
+                      <tbody>
+                        <tr *ngFor="let venta of ventasProductoMes">
+                            <td *ngFor="let col of encabezados2"> {{venta[col]}} </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

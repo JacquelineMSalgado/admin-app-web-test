@@ -11,9 +11,8 @@ export const ROUTES: RouteInfo[] = [
   { path: '/dashboard',     title: 'Inicio',         icon:'nc-layout-11',       class: '' },
   { path: '/productos',         title: 'Productos',             icon:'nc-tag-content',    class: '' },
   { path: '/ventas',          title: 'Ventas',              icon:'nc-bag-16',      class: '' },
-  { path: '/top', title: 'Top',     icon:'nc-bookmark-2',    class: '' },
   { path: '/stock', title: 'Stock',     icon:'nc-box-2',    class: '' },
-  { path: '/cerrar-sesion',       title: 'Cerrar sesión',    icon:'nc-single-02',  class: 'active-pro' },
+  // { path: '/cerrar-sesion',       title: 'Cerrar sesión',    icon:'nc-single-02',  class: 'active-pro' },
 ];
 
 @Component({

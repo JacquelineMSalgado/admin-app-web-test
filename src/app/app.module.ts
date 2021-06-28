@@ -15,13 +15,17 @@ import { InicioSesionComponent } from './layouts/inicio-sesion/inicio-sesion.com
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductosComponent } from './pages/productos/productos.component';
+import { VentasComponent } from './pages/ventas/ventas.component';
+import { StockComponent } from './pages/stock/stock.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     InicioSesionComponent,
-    ProductosComponent
+    ProductosComponent,
+    VentasComponent,
+    StockComponent
   ],
   imports: [
     BrowserModule,
