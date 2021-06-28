@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
-
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     NgbModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ]
 })
 export class AdminLayoutModule { }
