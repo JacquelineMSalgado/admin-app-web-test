@@ -1,0 +1,36 @@
+@import '../../assets/scss/variables.scss';
+
+.nav li.active {
+    background-color: $color-info;
+}
+
+li.active > a > p,  li.active > a > i{
+    color: $color-active;
+}
+
+li > a > p,  li > a > i {
+    color: white;
+    font-style: normal;
+    font-size: 1rem;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+}
+
+li > a > p {
+    font-family: 'Century Gothic';
+}
+
+.sidebar-wrapper {
+    background-color: $color-primary;
+}
+
+.logo .simple-text {
+    color: white;
+    font-style: normal;
+    font-size: 1rem;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    font-family: 'Century Gothic';
+}
