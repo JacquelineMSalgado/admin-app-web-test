@@ -1,51 +1,27 @@
-<div class="content d-flex align-items-center login-page">
-    <div class="box-content d-flex align-items-center">
-        <div class="m-0 p-0 w-100">
-            <figure class="px-5 py-0 m-0 mb-2">
-                <!-- <img [src]="rutaImagen+'/logo_mix.png'" title="LOGO OFICIAL DE PLATAFORMA WEB SAPV" class="img-fluid"> -->
-            </figure>
-            <div class="container rounded py-3 px-4">
-                <div class="w-100 m-0 p-0 d-flex justify-content-end">
-                    <a target="_blank" class="text-telcel">
-                        <i class="fa fa-question-circle ml-auto fa-lg text-telcel" title="CENTRO DE AYUDA"></i>
-                    </a>
+<div class="row content">
+    <div class="content-backcolor-primary content-center col-md-4">
+        <img [src]="rutaResourcesImg + 'inicio-sesion/logo-temp.png'" alt="Nuevo Diseño">
+    </div>
+    <div class="content-backcolor-secondary content-center col-md-8">
+        <div class="container rounded py-3 px-4 col-md-8">
+            <h4 class="text-center m-0 pb-3">INICIO DE SESIÓN WEB</h4>
+            <form #formInicioSesion="ngForm" novalidate>
+                <div class="form-group">
+                    <label class="labelregistro p-0 m-0">Correo electrónico</label>
+                    <input type="text" class="form-control" placeholder="Escribe tu correo" [class.is-invalid]="email.invalid && email.touched" name="email" email pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required [(ngModel)]="usuarioModel.email" #email="ngModel">
+                    <span class="help-bpx animated fadeIn text-danger" *ngIf="email.invalid && email.touched" style="font-size: 10px;">Escribe un formato valido de correo</span>
                 </div>
-                <h4 class="text-center text-telcel m-0 pb-2">Inicio de Sesión</h4>
-                <form novalidate>
-                    <!-- <div class="form-group">
-                        <label class="labelregistro p-0 m-0">Usuario</label>
-                        <div class="w-100 m-0 p-0 box-input-icon">
-                            <span class="text-telcel d-flex align-items-center justify-content-center"><i title="USUARIO" class="fas fa-user"></i></span>
-                            <input type="text" class="form-control" placeholder="Escribe tu correo" [class.is-invalid]="nombreusuario.invalid && nombreusuario.touched" name="nombreusuario" nombreusuario pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required ngModel #nombreusuario="ngModel">
-                        </div>
-                        <span class="help-bpx animated fadeIn text-danger" *ngIf="nombreusuario.invalid && nombreusuario.touched" style="font-size: 10px;">Escribe un formato valido de correo</span>
-                    </div>
-                    <div class="form-group">
-                        <label class="labelregistro p-0 m-0">Contraseña</label>
-                        <div class="w-100 m-0 p-0 box-input-icon">
-                            <span class="text-telcel d-flex align-items-center justify-content-center"><i title="CONTRASEÑA" class="fas fa-key"></i></span>
-                            <input type="password" class="form-control" placeholder="Escribe una contraseña" [class.is-invalid]="contrasenia.invalid && contrasenia.touched" name="contrasenia" contrasenia minlength="6" required [(ngModel)]='usuario.password' #contrasenia="ngModel">
-                        </div>
-                        <span class="help-bpx animated fadeIn text-danger" *ngIf="contrasenia.errors?.required && contrasenia.touched" style="font-size: 10px;">Se requiere que capture su contraseña</span>
-                    </div> -->
-                    <hr>
-                    <!-- <button title="ACCEDER" type="submit" class="btn btn-telcel cursor-pointer" [disabled]="finicio.invalid">Acceder</button> -->
-                    <!-- <div class="w-100 m-0 p-0 text-center text-olvide-contrasena">
-                        <a class="ingresar" title="FORMULARIO DE SOPORTE" href="#" data-toggle="modal" data-target=".bd-example-modal-lg" data-backdrop="static" data-keyboard="false" (click)="peticionActual === 'pass_olvidado'">¿Olvidaste tu contraseña o tienes usuario bloqueado?</a>
-                    </div> -->
-                    <!-- <hr>
-                    <span id="lblVersion" class="">Versión </span>
-                    <p class="text-muted col-lg-12">Producto desarrollado por <a href="http://itsmarts.com.mx">ITSmartS.</a> Todos los derechos reservados. © 2020 ITSmart Solutions México.</p>
-                    
-                    <hr>
-                    <p class="font-weight-bolder"><a href="" target="_blank">CENTRO DE AYUDA</a></p> -->
-                </form>
-            </div>
-            <div class="w-100 text-center mt-2 text-copyright">
-                <!-- <span id="lblVersion" class="">Versión </span> -->
-                <p title="MENSAJE INFORMÁTIVO" class="text-muted col-lg-12 m-0 p-0 font-italic">EL USO DE ESTE SISTEMA ES EXCLUSIVO PARA LOS FINES AUTORIZADOS POR RADIOMOVIL DIPSA S.A DE C.V. Y ESTÁ SUJETO A SER AUDITADO EN CUALQUIER MOMENTO. TODA LA INFORMACIÓN AQUÍ MANEJADA TIENE CARÁCTER CONFIDENCIAL.</p>
-                <!-- <p class="text-muted col-lg-12 m-0 p-0">Producto desarrollado por <a href="http://itsmarts.com.mx">ITSmartS.</a> Todos los derechos reservados. © 2020 ITSmart Solutions México.</p> -->
-            </div>
+                <div class="form-group">
+                    <label class="labelregistro p-0 m-0">Contraseña</label>
+                    <input type="password" class="form-control" placeholder="Escribe una contraseña" [class.is-invalid]="contrasenia.invalid && contrasenia.touched" name="contrasenia" contrasenia pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required [(ngModel)]='usuarioModel.contrasenia' #contrasenia="ngModel">
+                    <span class="help-bpx animated fadeIn text-danger" *ngIf="contrasenia.errors?.required && contrasenia.touched" style="font-size: 10px;">Se requiere que capture su contraseña</span>
+                    <span class="help-bpx animated fadeIn text-danger" *ngIf="contrasenia.invalid && contrasenia.touched" style="font-size: 10px;">La contraseña debe tener al menos ocho carácteres, una letra, un número y un carácter especial.</span>
+                </div>
+                <hr>
+                <button title="Acceder" type="submit" class="btn btn-primary btn-block cursor-pointer" [disabled]="formInicioSesion.invalid" (click)="validarSesion()">Acceder</button>
+                <hr>
+                <p class="text-muted text-center col-lg-12">Elaborado por <a href="https://my.indeed.com/p/0nveg7m" target="_blank">Jacqueline Mireya Salgado</a> - Desarrolladora de software. © 2021</p>
+            </form>
         </div>
     </div>
 </div>

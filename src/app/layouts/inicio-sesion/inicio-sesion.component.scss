@@ -1,0 +1,186 @@
+@import '../../../assets/scss/variables.scss';
+/* Estilos generales para títulos y parráfos */
+
+/* Add some content at the bottom of the video/page */
+.content {
+    /* overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed; */
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    min-height: 100%;
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-size: 1rem;
+    color: $color-primary;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.text-muted {
+    font-size: 0.9rem;
+}
+
+.content-backcolor-primary {
+    background: $color-primary;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#393939",endColorstr="#afafaf",GradientType=1);
+}
+
+.content-backcolor-secondary {
+    background: $color-secondary;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#393939",endColorstr="#afafaf",GradientType=1);
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: $color-primary !important;
+    border-color: transparent;
+}
+
+.btn:disabled {
+    background-color: $color-info !important;
+    border-color: transparent;
+}
+
+.form-control {
+    background-color: $color-secondary;
+    border-color: $color-primary;
+    margin-top: 0.7rem;
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-size: 1rem;
+    color: $color-primary;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+    .content{
+        background-position: top;
+    }
+
+    .content .box-content {
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 991px) and (orientation: landscape) {
+    .content{
+        background-position: top;
+    }
+
+    .content .box-content {
+        max-width: 25%;
+    }
+}
+
+:host {
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.row {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+@media screen and (max-width: 576px),
+screen and (max-device-width: 576px) {
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+a {
+    color: $color-info;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (min-width: 576px) {
+    header>img {
+        padding: 1% 0;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    header>img {
+        padding: 1% 0;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {
+    header>img {
+        padding: 0.5% 0;
+    }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    header>img {
+        padding: 0.5% 0;
+    }
+}

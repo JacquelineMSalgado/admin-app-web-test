@@ -12,6 +12,8 @@ import { SidebarModule } from './sidebar/sidebar.module';
 
 import { AppRoutes } from './app.routing';
 import { InicioSesionComponent } from './layouts/inicio-sesion/inicio-sesion.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,10 @@ import { InicioSesionComponent } from './layouts/inicio-sesion/inicio-sesion.com
     SidebarModule,
     NavbarModule,
     FooterModule,
-    FixedpluginModule
+    FixedpluginModule,
+
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

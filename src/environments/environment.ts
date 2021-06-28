@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  rutaResourcesImg: '../../assets/img/',
+  baseUrl: 'http://localhost:5000/api/v1'
 };
 
 /*
