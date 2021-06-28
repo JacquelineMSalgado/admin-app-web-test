@@ -1,3 +1,5 @@
+@import '../../../assets/scss/variables.scss';
+
 @media screen and (max-width: 991px){
 
   .navbar {
@@ -370,7 +372,7 @@
             }
 
             &:after{
-              border-right: 17px solid $default-body-bg;
+              border-right: 17px solid $color-secondary;
               border-top: 17px solid transparent;
               border-bottom: 17px solid transparent;
               content: "";
