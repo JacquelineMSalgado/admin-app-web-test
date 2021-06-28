@@ -3,5 +3,5 @@ export class ProductoModel {
     public Titulo: string;
     public Descripcion: string;
     public PrecioUnitario: number;
-    public Existencias: number;
+    public Existencias: any;
 }

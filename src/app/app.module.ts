@@ -14,12 +14,14 @@ import { AppRoutes } from './app.routing';
 import { InicioSesionComponent } from './layouts/inicio-sesion/inicio-sesion.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductosComponent } from './pages/productos/productos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    InicioSesionComponent
+    InicioSesionComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,

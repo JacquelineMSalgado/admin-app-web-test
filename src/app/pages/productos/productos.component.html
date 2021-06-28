@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card ">
+            <div class="card-header ">
+                <h5 class="card-title">Productos registrados</h5>
+                <p class="card-category">Reporte</p>
+            </div>
+            <div class="card-body ">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th *ngFor="let enc of encabezados"> {{enc}} </th>
+                        </thead>
+                      <tbody>
+                        <tr *ngFor="let producto of productos">
+                            <td *ngFor="let col of encabezados"> {{producto[col]}} </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
